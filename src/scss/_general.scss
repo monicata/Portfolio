@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+body,
+ html {
+    font-size: 18px;
+    background: $purple;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    height: 100%;
+ overflow-x: hidden;
+    
+}
+.menu-icon {
+    position: fixed;
+    right: 36px;
+    top: 36px;
+    cursor: pointer;
+    padding: 20px;
+  z-index: 11;
+    .fas {
+       font-size: 2rem;
+       color: $black; 
+    }
+}
+
+.primary-btn {
+    background: $purple;
+    color: $white;
+    font-size: 13px;
+    letter-spacing: 2px;;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 13px 25px;
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 12px;
+    margin-bottom: 20px;
+
+    &:hover {
+        background: $aqua;
+    }
+}
+
+.ghost-btn {
+    border: 2px solid $black;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-right: 12px;
+    margin-bottom: 20px;
+    text-decoration: none;
+      &:hover {
+          background: $black;
+          color: $white;
+      }
+}
+
+.menu {
+
+   
+        background: $periwinkle;
+        //position: fixed;
+        position: absolute;
+        right: 0px;
+        height: 100%;
+        top: 8vh;
+      transform: translateX(100%);
+        width: 30%;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+        .nav-links{
+            width: 400px;
+            text-align: center;
+            
+            a{
+                font-size: 2.3rem;
+                padding: 1rem;
+                display: block;
+                text-decoration: none;
+                color: $white;
+                
+                
+            
+                &:hover{
+                    color: $purple;
+                }
+            }
+        
+        }
+
+}
+
+.menu-active {
+    .menu-icon {
+     .fas {
+      color: $white;
+  
+    }
+
+}   
+      
+       // transform: translate3d(700px,0,0);
+       transform: translateX(0%);
+    
+}
